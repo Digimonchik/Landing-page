@@ -1,0 +1,60 @@
+.top-section {
+    width: 100%;
+    padding: 98px 312px 210px;
+    height: 720px;
+    background-image: url('/images/topSection.png');
+    background-size: auto;
+    position: relative;
+
+    &__number {
+        line-height: 149%;
+        font-size: 18px;
+        color: rgba(149, 154, 159, 1)
+    }
+
+    &__title {
+        max-width: 685px;
+        font-size: 70px;
+        color: white;
+        line-height: 100%;
+        letter-spacing: 0%;
+        margin-top: 22px;
+    }
+
+    &__description {
+        color: rgba(149, 154, 159, 1);
+        line-height: 149%;
+        font-size: 24px;
+        font-weight: 400;
+        margin-top: 10px;
+
+
+    }
+
+    &__buttons {
+        margin-top: 84px;
+        display: flex;
+        gap: 18px;
+    }
+
+
+    &__button {
+        &--yellow {
+            width: 198px;
+            height: 56px;
+            color: rgba(55, 61, 67, 1);
+            background: rgba(251, 221, 55, 1);
+        }
+
+        &--gray {
+            width: 273px;
+            height: 56px;
+            border: 1px solid rgba(237, 241, 247, 1);
+            color: rgba(237, 241, 247, 1);
+        }
+    }
+}
+
+.coloured {
+    color: rgba(251, 221, 55, 1)
+}
