@@ -1,0 +1,28 @@
+@import './styles/variables.scss';
+
+@import './styles/mixins.scss';
+@import './styles/contacts.scss';
+@import './styles/header.scss';
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: red;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.page {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 1920px;
+    font-family: $font-main;
+}

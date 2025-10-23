@@ -1,0 +1,102 @@
+.contacts {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  padding: 0 312px;
+  background: rgb(255, 255, 255);
+  font-family: "Proba Pro";
+}
+.contacts__adress {
+  font-size: 18px;
+}
+.contacts__phones {
+  font-weight: 400;
+  font-size: 18px;
+}
+.contacts__socials {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  gap: 26px;
+}
+.contacts__socials--link {
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black;
+}
+
+.header {
+  width: 100%;
+  padding: 0 312px;
+  height: 70px;
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+}
+.header__navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+}
+.header__menu {
+  display: flex;
+  justify-content: justify-content space-between;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  gap: 28px;
+}
+.header__menu--link::after {
+  content: "";
+  display: flex;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(251, 221, 55);
+  margin-top: 2px;
+}
+.header__catalog {
+  margin-right: 57px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 0;
+  gap: 8.8px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  background: red;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.page {
+  padding: 0;
+  margin: 0 auto;
+  max-width: 1920px;
+  font-family: "Proba Pro";
+}
+
+/*# sourceMappingURL=index.css.map */
