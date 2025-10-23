@@ -21,8 +21,9 @@ a {
 }
 
 .page {
-    padding: 0;
+
     margin: 0 auto;
     max-width: 1920px;
     font-family: $font-main;
+    background: rgba(245, 245, 245, 1);
 }

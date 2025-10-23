@@ -10,6 +10,13 @@
   background: rgb(255, 255, 255);
   font-family: "Proba Pro";
 }
+.contacts__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 101px;
+}
 .contacts__adress {
   font-size: 18px;
 }
@@ -76,6 +83,12 @@
   gap: 0;
   gap: 8.8px;
 }
+.header__search {
+  width: 16px;
+  height: 16px;
+  background-image: url("/images/search.png");
+  margin-left: 155px;
+}
 
 * {
   margin: 0;
@@ -93,10 +106,10 @@ a {
 }
 
 .page {
-  padding: 0;
   margin: 0 auto;
   max-width: 1920px;
   font-family: "Proba Pro";
+  background: rgb(245, 245, 245);
 }
 
 /*# sourceMappingURL=index.css.map */

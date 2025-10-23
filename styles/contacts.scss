@@ -6,6 +6,11 @@
     background: rgba(255, 255, 255, 1);
     font-family: $font-main;
 
+    &__container {
+        @include flex-row($gap: 101px);
+
+    }
+
     &__adress {
         font-size: 18px;
     }
@@ -13,6 +18,7 @@
     &__phones {
         font-weight: 400;
         font-size: 18px;
+
     }
 
     &__socials {

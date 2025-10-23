@@ -30,4 +30,11 @@
         @include flex-row();
         gap: 8.8px;
     }
+
+    &__search {
+        width: 16px;
+        height: 16px;
+        background-image: url('/images/search.png');
+        margin-left: 155px;
+    }
 }
