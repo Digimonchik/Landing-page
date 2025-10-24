@@ -238,6 +238,35 @@
   background: rgb(237, 241, 247);
 }
 
+.advantages__inner {
+  width: 100%;
+  padding: 0 298px 71px 310px;
+  height: 326px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+}
+.advantages__description {
+  text-align: center;
+  line-height: 149%;
+  color: rgb(136, 144, 153);
+  font-size: 18px;
+}
+.advantages__sections {
+  width: 100%;
+}
+.advantages__section {
+  width: 435px;
+  height: 100px;
+  border: 1px solid red;
+}
+.advantages__section-header {
+  font-size: 20px;
+  font-weight: 400;
+}
+
 * {
   margin: 0;
   padding: 0;

@@ -1,0 +1,32 @@
+.advantages {
+    &__inner {
+        width: 100%;
+        padding: 0 298px 71px 310px;
+        height: 326px;
+        @include flex-row($direction: column, $justify: space-between)
+    }
+
+    &__description {
+        text-align: center;
+        line-height: 149%;
+        color: $dark-gray;
+        font-size: 18px;
+    }
+
+    &__sections {
+        width: 100%;
+    }
+
+    &__section {
+        width: 435px;
+        height: 100px;
+        border: 1px solid red;
+
+        &-header {
+            font-size: 20px;
+            font-weight: 400;
+        }
+    }
+
+
+}
