@@ -1,0 +1,35 @@
+.offer {
+
+
+    &__inner {
+        padding: 51px 308px 63px 309px;
+        width: 100%;
+        @include flex-row($direction: column)
+    }
+
+    &__sections {
+        margin-top: 78px;
+        @include flex-row();
+        gap: 20px;
+    }
+
+    &__section {
+        height: 360px;
+        width: 310px;
+        background: rgba(255, 255, 255, 1);
+        @include flex-row($direction: column, $justify: start);
+
+        &-description {
+            height: 114px;
+            text-align: center;
+            @include flex-row($direction: column);
+            font-size: 20px;
+        }
+
+        &-button--gray {
+            width: 215px;
+            height: 56px;
+            background: $gray;
+        }
+    }
+}

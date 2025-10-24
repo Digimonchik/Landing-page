@@ -1,10 +1,12 @@
 .top-section {
-    width: 100%;
-    padding: 98px 312px 210px;
-    height: 720px;
-    background-image: url('/images/topSection.png');
-    background-size: auto;
-    position: relative;
+    &__inner {
+        width: 100%;
+        padding: 98px 312px 210px;
+        height: 720px;
+        background-image: url('/images/topSection.png');
+        background-size: auto;
+        position: relative;
+    }
 
     &__number {
         line-height: 149%;
@@ -39,22 +41,47 @@
 
 
     &__button {
+
         &--yellow {
             width: 198px;
             height: 56px;
             color: rgba(55, 61, 67, 1);
-            background: rgba(251, 221, 55, 1);
+            background: $yellow;
         }
 
         &--gray {
             width: 273px;
             height: 56px;
-            border: 1px solid rgba(237, 241, 247, 1);
-            color: rgba(237, 241, 247, 1);
+            border: 1px solid $white;
+            color: $white;
         }
     }
+
+    &__slider {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 26px;
+        height: 5px;
+        min-width: 175px;
+
+        @include flex-row($justify: space-between);
+        gap: 10px;
+
+        &-item {
+            &.active {
+                background: $yellow;
+                width: 83px;
+            }
+
+            width: 23px;
+            height: 5px;
+            background: rgba(149, 154, 159, 1);
+        }
+    }
+
 }
 
 .coloured {
-    color: rgba(251, 221, 55, 1)
+    color: $yellow;
 }

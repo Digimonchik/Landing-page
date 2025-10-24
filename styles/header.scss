@@ -1,9 +1,12 @@
 .header {
-    width: 100%;
-    padding: 0 312px;
-    height: 70px;
-    font-size: 20px;
-    @include flex-row($justify: space-between);
+
+    &__inner {
+        width: 100%;
+        padding: 0 312px;
+        height: 70px;
+        font-size: 20px;
+        @include flex-row($justify: space-between);
+    }
 
     &__navigation {
         @include flex-row($justify: space-between);
@@ -13,7 +16,7 @@
         @include flex-row(justify-content space-between);
         gap: 28px;
 
-        &--link {
+        &-link {
             &::after {
                 content: '';
                 display: flex;
