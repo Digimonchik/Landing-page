@@ -2,11 +2,11 @@
     &__inner {
         width: 100%;
         padding: 0 298px 71px 310px;
-        height: 326px;
         @include flex-row($direction: column, $justify: space-between)
     }
 
     &__description {
+        margin-top: 64px;
         text-align: center;
         line-height: 149%;
         color: $dark-gray;
@@ -15,16 +15,41 @@
 
     &__sections {
         width: 100%;
+        @include flex-row;
+        margin-top: 42px;
     }
 
     &__section {
         width: 435px;
+        position: relative;
         height: 100px;
+        @include flex-row($direction: column, $align: start);
+        padding-left: 126px;
+        gap: 13px;
         border: 1px solid red;
 
         &-header {
+            color: rgba(55, 61, 67, 1);
             font-size: 20px;
             font-weight: 400;
+        }
+
+        &-description {
+            font-size: 18px;
+            color: $dark-gray;
+        }
+
+        &_image {
+            width: 80px;
+            aspect-ratio: 1/1;
+            background: rgba(255, 255, 255, 1);
+            border-radius: 50%;
+            @include flex-row();
+            left: 0;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
         }
     }
 

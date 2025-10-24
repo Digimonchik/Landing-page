@@ -1,0 +1,31 @@
+.steps {
+    &__inner {
+        width: 100%;
+        @include flex-row($direction: column);
+        padding: 0 310px;
+    }
+
+    &__description {
+        margin-top: 48px;
+        font-weight: 400;
+        font-size: 18px;
+
+    }
+
+    &__sections {
+        @include flex-row();
+        margin-top: 45px;
+        gap: 20px;
+    }
+
+    &__section {
+        width: 420px;
+        height: 247px;
+        background: rgba(255, 255, 255, 1);
+        @include flex-row($justify: space-evenly, $direction: column);
+
+        &-arrow {
+            position: absolute;
+        }
+    }
+}
