@@ -2,13 +2,14 @@
     &__inner {
         width: 100%;
         @include flex-row($direction: column);
-        padding: 0 310px;
+        padding: 0 310px 84px;
     }
 
     &__description {
         margin-top: 48px;
         font-weight: 400;
         font-size: 18px;
+        color: $dark-gray
 
     }
 
@@ -22,10 +23,51 @@
         width: 420px;
         height: 247px;
         background: rgba(255, 255, 255, 1);
+        border-radius: 12px;
         @include flex-row($justify: space-evenly, $direction: column);
+        position: relative;
+        &-title {
+            font-size: 20px;
 
+        }
+        &-description {
+            color:$dark-gray;
+            text-align: center;
+
+        }
+        &-button {
+            width:189px;
+            height: 47px;
+            font-size: 18px;
+            border-radius: 6px;
+            background:$yellow;
+        }
         &-arrow {
             position: absolute;
+             width: 67px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            text-align: center;
+            background: $light-gray;
+    
+        @include flex-row();
+        &:first-child {
+            left:0;
+            transform: translate(-67%);
         }
+        &:last-child {
+            right:0;
+            transform: translate(67%);
+            z-index: 1;
+        }
+
+        }
+        &-icon {
+            width: 80px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            border: 1px solid $yellow;
+            text-align: center;
+        @include flex-row()        }
     }
 }
