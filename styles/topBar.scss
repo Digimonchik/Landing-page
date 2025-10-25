@@ -1,11 +1,15 @@
 .top-bar {
+    background: rgba(255, 255, 255, 1);
+
     &__inner {
         width: 100%;
         height: 50px;
+        margin: 0 auto;
         @include flex-row($justify: space-between);
-        padding: 0 312px;
-        background: rgba(255, 255, 255, 1);
+        max-width: 1300px;
         font-family: $font-main;
+        padding-left: 3px;
+
     }
 
     &__container {
@@ -20,12 +24,17 @@
     &__phones {
         font-weight: 400;
         font-size: 18px;
+        padding-right: 6px;
+        padding-bottom: 3px;
+
 
     }
 
     &__socials {
         @include flex-row($justify: space-between);
-        gap: 26px;
+        gap: 26.6px;
+        padding-right: 1px;
+
 
         &-link {
             font-size: 15px;

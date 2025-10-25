@@ -2,19 +2,40 @@
 
 
     &__inner {
-        padding: 51px 308px 63px 309px;
+        margin: 0 auto;
+        padding-top: 45.5px;
         width: 100%;
+        max-width: 1300px;
         @include flex-row($direction: column)
     }
 
+    &__title {
+        color: rgba(55, 61, 67, 1);
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 120%;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(136, 144, 153, 1);
+            height: 1px;
+            margin-top: 36px;
+        }
+    }
+
     &__sections {
-        margin-top: 78px;
+        margin-top: 83px;
         @include flex-row();
         gap: 20px;
     }
 
     &__section {
-        height: 360px;
+        height: 375px;
         width: 310px;
         background: rgba(255, 255, 255, 1);
         @include flex-row($direction: column, $justify: start);

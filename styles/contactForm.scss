@@ -1,7 +1,10 @@
 .contact-form {
+    margin-top: 52px;
+
     &__inner {
+        margin: 0 auto;
         width: 100%;
-        padding: 53px 310px 86px;
+        max-width: 1300px;
         @include flex-row();
     }
 
@@ -13,8 +16,10 @@
 
     &__section {
         width: 50%;
+        height: 753px;
         padding: 68px 81px 72px 71px;
         @include flex-row($direction: column);
+        background-color: white;
     }
 
     &__title {
@@ -23,8 +28,10 @@
     }
 
     &__description {
-        margin-top: 71px;
+        margin-top: 70px;
         color: $dark-gray;
+        font-size: 18px;
+        line-height: 149%;
     }
 
 
@@ -32,9 +39,9 @@
     &__form {
 
         width: 500px;
-        height: 400px;
         margin-top: 33px;
-        @include flex-row($direction: column, $justify: space-between)
+        @include flex-row($direction: column);
+        gap: 25px;
     }
 
     &__input {
@@ -46,20 +53,27 @@
         position: relative;
 
         &:first-child {
-            padding: 23px 26px 15px 18px;
+            padding: 23px 16px 15px 18px;
         }
 
         &:nth-child(2) {
-            padding: 22px 26px 16px 19px;
+            padding: 22px 16px 22px 19px;
         }
 
         &:nth-child(3) {
-            padding: 20px 0 18px 19px;
+            padding: 20px 0 22px 19px;
+        }
+
+        &:nth-child(4) {
+
+            background: none;
+
         }
 
         &-label {
             position: absolute;
-            top: 0;
+            font-size: 14px;
+            top: 8px;
             color: rgba(196, 203, 210, 1);
 
         }
@@ -67,6 +81,7 @@
         &-field {
             font-size: 18px;
             flex-grow: 1;
+            font-family: $font-main;
             color: rgba(136, 144, 153, 1);
             border: 0px;
             background-color: rgba(237, 241, 247, 1);
@@ -115,6 +130,8 @@
         &-description {
             margin-left: 30px;
             font-size: 18px;
+            margin-top: 7px;
+            line-height: 149%;
             color: rgba(136, 144, 153, 1);
         }
     }
@@ -122,6 +139,7 @@
     &__button {
         width: 100%;
         height: 65px;
+        color: rgba(55, 61, 67, 1);
         background: $yellow;
 
     }

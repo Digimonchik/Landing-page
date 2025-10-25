@@ -1,19 +1,42 @@
 .accordion {
+    margin-top: 80px;
+
     &__inner {
         width: 100%;
         height: 766px;
+        margin: 0 auto;
         @include flex-row($direction: column);
-        padding: 0 310px;
+        max-width: 1300px;
+    }
+
+    &__title {
+        color: rgba(55, 61, 67, 1);
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 120%;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(136, 144, 153, 1);
+            height: 1px;
+            margin-top: 33px;
+        }
     }
 
     &__description {
         color: $dark-gray;
-        margin-top: 48px;
+        font-size: 18px;
+        margin-top: 58px;
     }
 
     &__container {
         min-height: 430px;
-        margin-top: 36px;
+        margin-top: 46px;
         width: 100%;
         @include flex-row($direction: column);
         gap: 20px;
@@ -25,6 +48,11 @@
         background: rgba(255, 255, 255, 1);
         border-radius: 12px;
         padding: 23px;
+        padding-right: 20px;
+
+        &:nth-child(2) {
+            min-height: 155px;
+        }
 
         &-title {
             font-size: 20px;
@@ -52,6 +80,7 @@
         &-paragraph {
             margin-top: 27px;
             color: $dark-gray;
+            line-height: 149%;
             font-size: 18px;
             width: 100%;
 
@@ -59,9 +88,11 @@
     }
 
     &__button {
-        margin-top: 34px;
+        margin-top: 40px;
         border: 1px solid rgba(196, 203, 210, 1);
+        color: rgba(136, 144, 153, 1);
         width: 215px;
         height: 56px;
+        background: unset;
     }
 }

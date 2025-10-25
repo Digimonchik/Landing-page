@@ -1,7 +1,10 @@
 .awards {
+    margin-top: 87px;
+
     &__inner {
         width: 100%;
-        padding: 0 310px;
+        max-width: 1300px;
+        margin: 0 auto;
         display: flex;
     }
 
@@ -11,18 +14,46 @@
         background: url('/images/awardsBackground.png');
         display: flex;
 
+
     }
 
     &__item {
         flex-grow: 1;
-        @include flex-row($direction: column);
+        @include flex-row($direction: column, $justify: center, $align: center);
+        position: relative;
 
         &-description {
             font-size: 18px;
+            margin-top: 10px;
             color: rgba(255, 255, 255, 1);
             width: 176px;
             text-align: center;
             line-height: 149%;
+
+        }
+
+        &:first-child {
+            &::after {
+                content: "";
+                position: absolute;
+                height: 67px;
+                width: 1px;
+                background: rgba(255, 255, 255, 1);
+                right: 0;
+
+            }
+        }
+
+        &:last-child {
+            &::before {
+                content: "";
+                position: absolute;
+                height: 67px;
+                width: 1px;
+                background: rgba(255, 255, 255, 1);
+                left: 0;
+
+            }
         }
 
     }

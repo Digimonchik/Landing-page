@@ -1,22 +1,44 @@
 .steps {
+    margin-top: 73px;
+
     &__inner {
         width: 100%;
+        margin: 0 auto;
         @include flex-row($direction: column);
-        padding: 0 310px 84px;
+
     }
 
     &__description {
-        margin-top: 48px;
+        margin-top: 53px;
         font-weight: 400;
         font-size: 18px;
         color: $dark-gray
+    }
 
+    &__title {
+        color: rgba(55, 61, 67, 1);
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 120%;
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(136, 144, 153, 1);
+            height: 1px;
+            margin-top: 29px;
+        }
     }
 
     &__sections {
         @include flex-row();
-        margin-top: 45px;
+        margin-top: 50px;
         gap: 20px;
+        padding-left: 5px;
     }
 
     &__section {
@@ -24,50 +46,67 @@
         height: 247px;
         background: rgba(255, 255, 255, 1);
         border-radius: 12px;
-        @include flex-row($justify: space-evenly, $direction: column);
+        padding-top: 25px;
+        @include flex-row($justify: start, $direction: column);
         position: relative;
+
         &-title {
             font-size: 20px;
+            margin-top: 15px;
 
         }
+
         &-description {
-            color:$dark-gray;
+            color: $dark-gray;
             text-align: center;
+            font-size: 18px;
+            line-height: 149%;
+            margin-top: 22px;
+
+
 
         }
+
         &-button {
-            width:189px;
+            width: 189px;
             height: 47px;
             font-size: 18px;
             border-radius: 6px;
-            background:$yellow;
+            margin-top: 23px;
+            background: $yellow;
         }
+
         &-arrow {
             position: absolute;
-             width: 67px;
+            width: 67px;
             aspect-ratio: 1/1;
             border-radius: 50%;
             text-align: center;
             background: $light-gray;
-    
-        @include flex-row();
-        &:first-child {
-            left:0;
-            transform: translate(-67%);
-        }
-        &:last-child {
-            right:0;
-            transform: translate(67%);
-            z-index: 1;
-        }
+            top: 94px;
+            @include flex-row();
+
+            &:first-child {
+                left: 0;
+                transform: translateX(-67%);
+            }
+
+            &:last-child {
+                right: 0;
+                transform: translateX(67%);
+                z-index: 1;
+            }
 
         }
+
         &-icon {
             width: 80px;
             aspect-ratio: 1/1;
             border-radius: 50%;
             border: 1px solid $yellow;
             text-align: center;
-        @include flex-row()        }
+            font-size: 20px;
+            @include flex-row()
+        }
     }
 }

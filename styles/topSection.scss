@@ -1,9 +1,12 @@
 .top-section {
+    background-image: url('/images/topSection.png');
+
     &__inner {
+        margin: 0 auto;
         width: 100%;
-        padding: 98px 312px 210px;
+        padding-top: 98px;
         height: 720px;
-        background-image: url('/images/topSection.png');
+        max-width: 1300px;
         background-size: auto;
         position: relative;
     }
@@ -11,6 +14,7 @@
     &__number {
         line-height: 149%;
         font-size: 18px;
+        padding-left: 3px;
         color: rgba(149, 154, 159, 1)
     }
 
@@ -20,7 +24,7 @@
         color: white;
         line-height: 100%;
         letter-spacing: 0%;
-        margin-top: 22px;
+        margin-top: 16px;
     }
 
     &__description {
@@ -28,32 +32,37 @@
         line-height: 149%;
         font-size: 24px;
         font-weight: 400;
-        margin-top: 10px;
+        margin-top: 15px;
+        padding-left: 3px;
 
 
     }
 
     &__buttons {
-        margin-top: 84px;
+        margin-top: 86px;
         display: flex;
+
         gap: 18px;
     }
 
 
     &__button {
 
+
         &--yellow {
             width: 198px;
             height: 56px;
+            border-radius: 0;
             color: rgba(55, 61, 67, 1);
             background: $yellow;
         }
 
         &--gray {
-            width: 273px;
+            width: 275px;
             height: 56px;
-            border: 1px solid $white;
-            color: $white;
+            border-radius: 0;
+            border: 1px solid rgba(237, 241, 247, 1);
+            color: rgba(237, 241, 247, 1);
         }
     }
 
@@ -74,6 +83,7 @@
                 width: 83px;
             }
 
+            border-radius: 3px;
             width: 23px;
             height: 5px;
             background: rgba(149, 154, 159, 1);
