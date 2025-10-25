@@ -1,0 +1,128 @@
+.contact-form {
+    &__inner {
+        width: 100%;
+        padding: 53px 310px 86px;
+        @include flex-row();
+    }
+
+    &__image {
+        width: 649px;
+        height: 753px;
+
+    }
+
+    &__section {
+        width: 50%;
+        padding: 68px 81px 72px 71px;
+        @include flex-row($direction: column);
+    }
+
+    &__title {
+        justify-self: start;
+        align-self: start;
+    }
+
+    &__description {
+        margin-top: 71px;
+        color: $dark-gray;
+    }
+
+
+
+    &__form {
+
+        width: 500px;
+        height: 400px;
+        margin-top: 33px;
+        @include flex-row($direction: column, $justify: space-between)
+    }
+
+    &__input {
+        width: 100%;
+        height: 65px;
+        border-radius: 6px;
+        background: rgba(237, 241, 247, 1);
+        @include flex-row($justify: space-between);
+        position: relative;
+
+        &:first-child {
+            padding: 23px 26px 15px 18px;
+        }
+
+        &:nth-child(2) {
+            padding: 22px 26px 16px 19px;
+        }
+
+        &:nth-child(3) {
+            padding: 20px 0 18px 19px;
+        }
+
+        &-label {
+            position: absolute;
+            top: 0;
+            color: rgba(196, 203, 210, 1);
+
+        }
+
+        &-field {
+            font-size: 18px;
+            flex-grow: 1;
+            color: rgba(136, 144, 153, 1);
+            border: 0px;
+            background-color: rgba(237, 241, 247, 1);
+
+            &:focus {
+                outline: none;
+            }
+
+        }
+
+        &-button {
+            width: 13.57px;
+            aspect-ratio: 1/1;
+            border: 0px;
+            background: url('/images/cross.png');
+        }
+    }
+
+    &__checkbox {
+        position: absolute;
+        appearance: none;
+        width: 20px;
+        aspect-ratio: 1/1;
+        border-radius: 2px;
+        background-color: $yellow;
+        cursor: pointer;
+        top: 10px;
+
+        :checked {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        &:checked::after {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 4px;
+            width: 5px;
+            height: 10px;
+            border: solid rgb(0, 0, 0);
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+
+        &-description {
+            margin-left: 30px;
+            font-size: 18px;
+            color: rgba(136, 144, 153, 1);
+        }
+    }
+
+    &__button {
+        width: 100%;
+        height: 65px;
+        background: $yellow;
+
+    }
+}

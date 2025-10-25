@@ -1,0 +1,80 @@
+.shop {
+    &__inner {
+        width: 100%;
+        @include flex-row($direction: column, $justify: space-between)
+    }
+
+    &__description {
+        font-size: 18px;
+        font-weight: 400;
+        color: $dark-gray;
+        margin-top: 48px;
+    }
+
+    &__navigation {
+        width: 285px;
+        height: 29px;
+        @include flex-row($justify: space-between);
+        font-size: 18px;
+        margin-top: 21px;
+
+        &-item {
+            &--active {
+                &::after {
+                    content: '';
+                    display: flex;
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(251, 221, 55, 1);
+                    margin-top: 2px;
+                }
+            }
+        }
+    }
+
+    &__categories {
+        @include flex-row();
+        gap: 20px;
+        margin-top: 30px;
+    }
+
+    &__category {
+        width: 310px;
+        height: 364px;
+        background: white;
+
+        &-image {
+            height: 182px;
+            width: 100%;
+        }
+
+        &-content {
+            padding: 25px 20px 32px 23px;
+        }
+
+        &-name {
+            text-transform: uppercase;
+            color: $dark-gray;
+
+        }
+
+        &-description {
+            font-size: 18px;
+            margin-top: 21px;
+        }
+
+        &-price {
+            margin-top: 18px;
+        }
+    }
+
+    &__button {
+        width: 215px;
+        height: 56px;
+        border: 1px solid rgba(196, 203, 210, 1);
+        color: $dark-gray;
+        margin-top: 34px;
+        color: $dark-gray;
+
+    }
+}
