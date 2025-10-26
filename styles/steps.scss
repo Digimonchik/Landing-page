@@ -1,6 +1,10 @@
 .steps {
     margin-top: 73px;
 
+    @include mobile {
+        margin-top: 40px;
+    }
+
     &__inner {
         width: 100%;
         margin: 0 auto;
@@ -39,6 +43,14 @@
         margin-top: 50px;
         gap: 20px;
         padding-left: 5px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
     }
 
     &__section {
@@ -49,6 +61,13 @@
         padding-top: 25px;
         @include flex-row($justify: start, $direction: column);
         position: relative;
+
+        @include mobile {
+            width: 100%;
+            max-width: 420px;
+            padding: 15px;
+            ;
+        }
 
         &-title {
             font-size: 20px;
@@ -89,12 +108,39 @@
             &:first-child {
                 left: 0;
                 transform: translateX(-67%);
+
+                @include mobile {
+                    display: none;
+                }
+
+                @include tablet {
+                    display: none;
+
+
+
+                }
             }
 
             &:last-child {
                 right: 0;
                 transform: translateX(67%);
                 z-index: 1;
+
+                @include mobile {
+                    display: none;
+
+                }
+
+                @include tablet {
+                    display: none;
+
+
+
+                }
+
+
+
+
             }
 
         }

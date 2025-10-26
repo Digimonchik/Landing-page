@@ -10,10 +10,24 @@
         font-family: $font-main;
         padding-left: 3px;
 
+        @include mobile {
+            flex-direction: column;
+            height: 70px;
+        }
+
+        @include tablet {
+            flex-direction: column;
+        }
     }
+
 
     &__container {
         @include flex-row($gap: 101px);
+
+        @include mobile {
+            flex-direction: column;
+            gap: 0;
+        }
 
     }
 

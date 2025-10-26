@@ -1,19 +1,21 @@
 .contacts {
-    margin-top: 80px;
+    margin-top: 88px;
 
     &__inner {
         width: 100%;
+        margin: 0 auto;
+        max-width: 1300px;
         @include flex-row($direction: column);
 
     }
 
     &__description {
-        margin-top: 49px;
+        margin-top: 55px;
+        font-size: 18px;
+        color: $dark-gray;
     }
 
     &__title {
-
-
         color: rgba(55, 61, 67, 1);
         font-size: 38px;
         font-weight: 400;
@@ -24,11 +26,12 @@
             position: absolute;
             content: '';
             width: 50px;
+            left: 50%;
+            transform: translateX(-50%);
             background: rgba(136, 144, 153, 1);
-            height: 2px;
-            margin-top: 33px;
+            height: 1px;
+            margin-top: 29px;
         }
-
     }
 
     &__section {
@@ -36,13 +39,34 @@
         width: 100%;
         max-width: 1300px;
         @include flex-row($justify: space-between);
+
+        @include mobile {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding-left: 5%;
+            padding-right: 5%;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            padding-left: 5%;
+            padding-right: 5%;
+
+        }
     }
 
     &__item {
-        width: 250px;
+        width: 311px;
         height: 110px;
         @include flex-row($justify: start);
         position: relative;
+
+        @include mobile {
+            width: 260px;
+        }
 
         &-number {
             width: 44px;
@@ -54,26 +78,32 @@
             font-size: 14px;
             position: absolute;
             background: $yellow;
-            top: 5px;
+            top: 0;
         }
 
 
         &-header {
             font-size: 18px;
             color: $dark-gray;
+            margin-top: 12px
         }
 
         &-description {
             color: rgba(55, 61, 67, 1);
+            font-size: 18px;
+            line-height: 149%;
+            margin-top: 18px;
         }
 
 
 
         &-container {
-            margin-left: 77px;
+            margin-left: 80px;
             display: flex;
+            height: 100%;
             flex-direction: column;
-            gap: 18px;
+
+
 
         }
 
@@ -86,15 +116,16 @@
         &-image {
             width: 100%;
             margin-top: 53px;
+            height: 400px;
+            object-fit: cover;
 
         }
 
         &-pointer {
             position: absolute;
             z-index: 2;
-            left: 50%;
-            transform: translate(-50% -50%);
-            top: 50%;
+            left: 48.9%;
+            top: 41.5%;
         }
     }
 

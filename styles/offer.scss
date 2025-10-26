@@ -15,6 +15,10 @@
         font-weight: 400;
         line-height: 120%;
 
+        @include mobile {
+            text-align: center;
+        }
+
         &::after {
             display: block;
             position: absolute;
@@ -32,7 +36,17 @@
         margin-top: 83px;
         @include flex-row();
         gap: 20px;
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+            height: 100%;
+        }
     }
+
 
     &__section {
         height: 375px;

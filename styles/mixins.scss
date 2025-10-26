@@ -5,3 +5,17 @@
     flex-direction: $direction;
     gap: $gap;
 }
+
+
+@mixin mobile {
+    @media (max-width: 699px) {
+        @content;
+    }
+}
+
+// --- Планшет (от 768px до 1023px)
+@mixin tablet {
+    @media (min-width: 700px) and (max-width: 1300px) {
+        @content;
+    }
+}

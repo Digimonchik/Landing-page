@@ -2,14 +2,32 @@
 
     &__inner {
         width: 100%;
-        padding: 0 312px;
+        margin: 0 auto;
+        max-width: 1300px;
         height: 70px;
         font-size: 20px;
         @include flex-row($justify: space-between);
+
+        @include mobile {
+            justify-content: space-evenly;
+        }
+
+        @include tablet {
+            justify-content: space-evenly;
+        }
     }
 
     &__navigation {
         @include flex-row($justify: space-between);
+
+        @include mobile {
+            $justify: start;
+        }
+
+        @include tablet {
+            $justify: start;
+        }
+
     }
 
     &__menu {
@@ -26,12 +44,39 @@
                 margin-top: 2px;
             }
         }
+
+        @include mobile {
+            display: none;
+        }
+
+        @include tablet {
+            display: none;
+        }
+
     }
 
     &__catalog {
         margin-right: 57px;
         @include flex-row();
         gap: 8.8px;
+
+        @include mobile {
+            margin-right: 10%;
+            margin-left: 10%;
+
+        }
+    }
+
+    &__burger {
+        display: none;
+
+        @include mobile {
+            display: flex;
+        }
+
+        @include tablet {
+            display: flex;
+        }
     }
 
     &__search {
@@ -39,5 +84,16 @@
         height: 16px;
         background-image: url('/images/search.png');
         margin-left: 155px;
+
+        @include mobile {
+            margin-left: 20px;
+            width: 16px;
+            height: 16px;
+        }
+
+        @include tablet {
+            margin-left: 50px;
+
+        }
     }
 }

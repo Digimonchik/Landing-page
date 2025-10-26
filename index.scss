@@ -22,7 +22,7 @@
     box-sizing: border-box;
 }
 
-html {}
+
 
 a {
     text-decoration: none;
@@ -35,4 +35,5 @@ a {
     max-width: 1920px;
     font-family: $font-main;
     background: rgba(245, 245, 245, 1);
+    overflow: hidden;
 }

@@ -6,11 +6,26 @@
         width: 100%;
         max-width: 1300px;
         @include flex-row();
+
+        @include mobile {
+            flex-direction: column;
+        }
+
+        @include tablet {
+            flex-wrap: wrap;
+        }
     }
 
+
     &__image {
-        width: 649px;
+        width: 100%;
+        max-width: 649px;
         height: 753px;
+
+        @include mobile {
+            max-height: 300px;
+            object-fit: contain;
+        }
 
     }
 
@@ -20,11 +35,53 @@
         padding: 68px 81px 72px 71px;
         @include flex-row($direction: column);
         background-color: white;
+
+        @include mobile {
+            width: 100%;
+            padding: 20px;
+        }
+
+        @include tablet {
+            width: 100%;
+            padding: 20px;
+        }
     }
 
     &__title {
-        justify-self: start;
-        align-self: start;
+        color: rgba(55, 61, 67, 1);
+        font-size: 38px;
+        font-weight: 400;
+        line-height: 120%;
+
+        @include mobile {
+            text-align: center;
+        }
+
+        @include tablet {
+            text-align: center;
+        }
+
+        &::after {
+            display: block;
+            position: absolute;
+            content: '';
+            width: 50px;
+            background: rgba(136, 144, 153, 1);
+            height: 2px;
+            margin-top: 35px;
+
+            @include mobile {
+
+                left: 50%;
+                transform: translate(-50%);
+            }
+
+            @include tablet {
+                left: 50%;
+                transform: translate(-50%);
+            }
+        }
+
     }
 
     &__description {
@@ -37,11 +94,16 @@
 
 
     &__form {
-
         width: 500px;
         margin-top: 33px;
         @include flex-row($direction: column);
         gap: 25px;
+
+        @include mobile {
+            width: 100%;
+            max-width: 550px;
+        }
+
     }
 
     &__input {
